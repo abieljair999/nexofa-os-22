@@ -182,4 +182,7 @@ const NexofaStorage = (() => {
   };
 })();
 
+// Exponer al scope global para que sea accesible por otros módulos
+window.NexofaStorage = NexofaStorage;
+
 console.log('[Nexofa Storage] Module loaded - Available:', NexofaStorage.isAvailable());
