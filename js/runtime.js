@@ -239,4 +239,7 @@ const NexofaRuntime = (() => {
   };
 })();
 
+// Exponer al scope global para que Bootloader y otros módulos puedan acceder al Runtime
+window.NexofaRuntime = NexofaRuntime;
+
 console.log('[Nexofa Runtime] Module loaded');
