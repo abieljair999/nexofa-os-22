@@ -161,4 +161,7 @@ const NexofaNotifications = (() => {
   };
 })();
 
+// Exponer al scope global para que Core/Shell puedan resolver la dependencia
+window.NexofaNotifications = NexofaNotifications;
+
 console.log('[Nexofa Notifications] Module loaded');
