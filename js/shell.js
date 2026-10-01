@@ -37,6 +37,13 @@ const NexofaShell = (() => {
         throw new Error('Desktop element not found');
       }
 
+      // [DEBUG DIAGNOSTICS] Verificar el estado de las dependencias ANTES de llamar checkDependencies
+      console.log('[DEBUG Shell] Notifications global:', window.NexofaNotifications);
+      console.log('[DEBUG Shell] Notifications type:', typeof window.NexofaNotifications);
+      console.log('[DEBUG Shell] Storage type:', typeof window.NexofaStorage);
+      console.log('[DEBUG Shell] Apps type:', typeof window.NexofaApps);
+      console.log('[DEBUG Shell] Core type:', typeof window.NexofaCore);
+
       // Verificar dependencias
       const deps = NexofaCore.checkDependencies(['NexofaStorage', 'NexofaApps', 'NexofaNotifications']);
       if (!deps.ok) {
