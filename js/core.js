@@ -193,4 +193,7 @@ const NexofaCore = (() => {
   };
 })();
 
+// Exponer al scope global para que otros módulos puedan acceder al Core
+window.NexofaCore = NexofaCore;
+
 console.log('[Nexofa Core] Module loaded');
