@@ -325,4 +325,7 @@ const NexofaShell = (() => {
   };
 })();
 
+// Exponer al scope global para que Bootloader y otros módulos puedan acceder al Shell
+window.NexofaShell = NexofaShell;
+
 console.log('[Nexofa Shell] Module loaded');
